@@ -274,7 +274,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 000000
+  m_Text: 00000
 --- !u!222 &657354717
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -631,8 +631,8 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: eb1cd330578cb964ab1dc25406affb31, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.8
-  m_Pitch: 1
-  Loop: 0
+  m_Pitch: 0.9
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -852,7 +852,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 18.01
 --- !u!222 &2038662956
 CanvasRenderer:
   m_ObjectHideFlags: 0
