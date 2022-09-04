@@ -9,6 +9,7 @@ public class ButtonIntervalControl : MonoBehaviour
     float _interval = 0f;
     [Header("確認用 : OnOffを管理する値"), SerializeField] public bool _activeController;
     [Header("表示時間"), SerializeField] public float _drawTime = 2f;
+    [SerializeField] float _startInterval = 2f;
     public float _timer;
     bool _isCoroutineNow = false;
 
@@ -19,6 +20,7 @@ public class ButtonIntervalControl : MonoBehaviour
     {
         _buttonComponent = GetComponent<Button>();
         _imageComponent = GetComponent<Image>();
+        _timer -= _startInterval;
     }
 
     void Update()
@@ -27,7 +29,7 @@ public class ButtonIntervalControl : MonoBehaviour
         {
             _timer += Time.deltaTime;
         }
-        else if(!_isCoroutineNow)
+        else if (!_isCoroutineNow)
         {
             Set_Interval();
             StartCoroutine(WaitInterval());
