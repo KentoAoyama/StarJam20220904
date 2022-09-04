@@ -10,6 +10,7 @@ public class TimeManager : MonoBehaviour
     [SerializeField] Text _countDownText;
     [SerializeField] float _endTime;
     [SerializeField] string _resultSceneName;
+    [SerializeField] GameObject _panel;
 
     float _countDown = 3.5f;
     float _timer;
@@ -20,6 +21,7 @@ public class TimeManager : MonoBehaviour
     void Awake()
     {
         _timer = _endTime;
+        _panel.SetActive(true);
     }
 
 
@@ -51,6 +53,7 @@ public class TimeManager : MonoBehaviour
     {
         if (_countDown < 1)
         {
+            _panel.SetActive(false);
             _countDownText.text = "";
             _isGame = true;
         }
@@ -65,6 +68,7 @@ public class TimeManager : MonoBehaviour
 
     IEnumerator GameOver()
     {
+        _panel.SetActive(true);
         _countDownText.text = "Finish";
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene(_resultSceneName);

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Aoyama/ResultScene.unity
     guid: dca122305c0d0ac4dbb6bfee9a011893
+  - enabled: 1
+    path: Assets/Aoyama/TitleScene.unity
+    guid: c7e7dff4a77e7534e9265fce785f8a05
   m_configObjects: {}

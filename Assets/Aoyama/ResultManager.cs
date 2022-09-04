@@ -6,11 +6,20 @@ using UnityEngine.UI;
 public class ResultManager : MonoBehaviour
 {
     [SerializeField] Text _scoreText;
-    [SerializeField] Text _score;
+    [SerializeField] GameObject _scoreTextUI;
 
 
     void Start()
     {
-        _score.text = ScoreManager._score.ToString("D6");
+        StartCoroutine(Score());
+    }
+
+
+    IEnumerator Score()
+    {
+        _scoreText.text = ScoreManager._score.ToString("D6");
+        _scoreTextUI.SetActive(false);
+        yield return new WaitForSeconds(1);
+        _scoreTextUI.SetActive(true);
     }
 }
