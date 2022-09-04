@@ -8,8 +8,8 @@ public class ButtonIntervalControl : MonoBehaviour
     [Header("インターバルの最大値と最小値"), SerializeField] RandomMinAndMaxValue _randomValue;
     float _interval = 0f;
     [Header("確認用 : OnOffを管理する値"), SerializeField] public bool _activeController;
-    [Header("表示時間"), SerializeField] float _drawTime = 2f;
-    float _timer;
+    [Header("表示時間"), SerializeField] public float _drawTime = 2f;
+    public float _timer;
     bool _isCoroutineNow = false;
 
     Button _buttonComponent;
@@ -23,7 +23,7 @@ public class ButtonIntervalControl : MonoBehaviour
 
     void Update()
     {
-        if (_timer < _drawTime)
+        if (_timer <= _drawTime)
         {
             _timer += Time.deltaTime;
         }
