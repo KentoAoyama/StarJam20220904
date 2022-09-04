@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlusScore_OnClickBtton : MonoBehaviour
 {
     ButtonIntervalControl _buttonIntervalControl;
+
     void Start()
     {
         _buttonIntervalControl = GetComponent<ButtonIntervalControl>();
