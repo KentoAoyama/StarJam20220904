@@ -165,7 +165,8 @@ MonoBehaviour:
     _minValue: 1
     _maxValue: 5
   _activeController: 0
-  _drawTime: 0.8
+  _drawTime: 1.5
+  _startInterval: 0
   _timer: 0
 --- !u!114 &5477951396129928518
 MonoBehaviour:
